@@ -436,4 +436,108 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
-}); 
+
+    // Initialize the pricing box with tabs
+    initializePricingBox();
+});
+
+// Initialize the pricing box with tabs
+function initializePricingBox() {
+    const pricingTabs = document.querySelectorAll('.pricing-tab');
+    const pricingPanels = document.querySelectorAll('.pricing-panel');
+    const prevBtn = document.querySelector('.pricing-nav-btn.prev');
+    const nextBtn = document.querySelector('.pricing-nav-btn.next');
+    
+    // Set up tab switching
+    pricingTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // Remove active class from all tabs and panels
+            pricingTabs.forEach(t => t.classList.remove('active'));
+            pricingPanels.forEach(p => p.classList.remove('active'));
+            
+            // Add active class to clicked tab
+            tab.classList.add('active');
+            
+            // Get the corresponding panel
+            const plan = tab.getAttribute('data-plan');
+            const panel = document.getElementById(`${plan}-panel`);
+            
+            if (panel) {
+                panel.classList.add('active');
+            }
+        });
+    });
+    
+    // Set up navigation buttons
+    if (prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => {
+            // Find the current active tab
+            const activeTab = document.querySelector('.pricing-tab.active');
+            if (!activeTab) return;
+            
+            // Find the previous tab
+            const prevTab = activeTab.previousElementSibling;
+            if (prevTab && prevTab.classList.contains('pricing-tab')) {
+                // Trigger click on the previous tab
+                prevTab.click();
+            } else {
+                // If no previous tab, go to the last tab (circular navigation)
+                const lastTab = document.querySelector('.pricing-tab:last-child');
+                if (lastTab) {
+                    lastTab.click();
+                }
+            }
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            // Find the current active tab
+            const activeTab = document.querySelector('.pricing-tab.active');
+            if (!activeTab) return;
+            
+            // Find the next tab
+            const nextTab = activeTab.nextElementSibling;
+            if (nextTab && nextTab.classList.contains('pricing-tab')) {
+                // Trigger click on the next tab
+                nextTab.click();
+            } else {
+                // If no next tab, go to the first tab (circular navigation)
+                const firstTab = document.querySelector('.pricing-tab:first-child');
+                if (firstTab) {
+                    firstTab.click();
+                }
+            }
+        });
+    }
+    
+    // Set up choose plan buttons
+    const choosePlanButtons = document.querySelectorAll('.choose-plan-btn');
+    choosePlanButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const plan = button.getAttribute('data-plan');
+            
+            // Scroll to contact section
+            const contactSection = document.getElementById('contact');
+            if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+                
+                // If there's a plan selector in the contact form, set its value
+                const planSelector = document.querySelector('#contact-form select[name="service"]');
+                if (planSelector) {
+                    // Find the option with text matching the plan
+                    Array.from(planSelector.options).forEach(option => {
+                        if (option.text.includes(plan)) {
+                            planSelector.value = option.value;
+                        }
+                    });
+                }
+            }
+        });
+    });
+    
+    // Initialize with the active tab (default is Standard)
+    const defaultTab = document.querySelector('.pricing-tab.recommended') || 
+                       document.querySelector('.pricing-tab');
+    if (defaultTab) {
+        defaultTab.click();
+    }
+} 

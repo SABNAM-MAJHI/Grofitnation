@@ -1,0 +1,759 @@
+
+@media (max-width: 768px) {
+    footer {
+        padding: 60px 0 20px;
+    }
+    
+    .footer-content {
+        gap: 35px;
+        padding: 0 20px;
+    }
+
+    .footer-column {
+        text-align: center;
+    }
+    
+    .footer-column ul li {
+        text-align: center;
+    }
+    
+    .contact-info p {
+        justify-content: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+    
+    .footer-bottom {
+        margin-top: 20px;
+    }
+    
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* Additional fixes for form elements and specific page sections */
+
+/* Fix for pricing section cards */
+.pricing-card {
+    text-align: center;
+}
+
+.card-header {
+    text-align: center;
+}
+
+.card-header h3 {
+    text-align: center;
+}
+
+.pricing-card .price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pricing-card .price span {
+    font-weight: 800;
+    font-size: 2.5rem;
+    display: inline-block;
+}
+
+@media (max-width: 576px) {
+    .pricing-card .price {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+    }
+    
+    .pricing-card .price span {
+        font-size: 2rem;
+    }
+}
+
+.pricing-card .btn {
+    margin: 0 auto;
+    display: block;
+    max-width: fit-content;
+}
+
+/* Fix for testimonials alignment */
+.testimonial {
+    text-align: left;
+}
+
+.testimonial-content {
+    text-align: left;
+}
+
+/* Fix for header alignment */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    text-align: left;
+}
+
+/* Fix for dropdown menu alignment */
+.dropdown-content {
+    text-align: left;
+}
+
+.dropdown-content a {
+    text-align: left;
+}
+
+/* Fix for form elements - ensure consistent alignment */
+select.form-control,
+textarea.form-control,
+input.form-control {
+    text-align: left;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* Fix for list alignment in content areas */
+.service-content ul,
+.about-text ul,
+.detail-box ul {
+    text-align: left;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.service-content li,
+.about-text li,
+.detail-box li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 15px;
+    text-align: left;
+}
+
+.service-content li::before,
+.about-text li::before,
+.detail-box li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* Fix for service page list items */
+.service-features {
+    text-align: left;
+}
+
+.service-features h4 {
+    text-align: left;
+}
+
+.service-features ul {
+    text-align: left;
+}
+
+.service-features li {
+    text-align: left;
+}
+
+/* Final mobile fixes for specific elements */
+@media (max-width: 768px) {
+    /* Give proper spacing and alignment on mobile */
+    .section-title,
+    .section-description {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    /* Fix for list items on mobile */
+    .service-features h4,
+    .service-features ul,
+    .service-features li {
+        text-align: center;
+    }
+    
+    .service-features ul {
+        padding-left: 0;
+    }
+    
+    .service-features li {
+        padding-left: 0;
+    }
+    
+    .service-features li::before {
+        position: static;
+        margin-right: 5px;
+    }
+    
+    /* Fix alignment for service content lists on mobile */
+    .service-content ul,
+    .about-text ul,
+    .detail-box ul {
+        text-align: left;
+        padding-left: 5px;
+    }
+    
+    /* Fix form buttons on mobile */
+    .contact-form button,
+    .form-group input[type="submit"] {
+        text-align: center;
+        margin: 15px auto 0;
+    }
+}
+
+/* Fix for images alignment and display */
+.banner-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.service-hero-image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* Fix button display issues */
+.banner-text .btn,
+.service-hero-text .btn {
+    display: inline-block;
+    width: auto;
+    max-width: fit-content;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Case studies image fixes */
+.case-study-image img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Fix for the approach section */
+.approach-steps {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.approach-step {
+    display: flex;
+    margin-bottom: 40px;
+    align-items: flex-start;
+}
+
+.step-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-right: 20px;
+    line-height: 1;
+    flex-shrink: 0;
+    width: 60px;
+    text-align: center;
+}
+
+/* Fix for the metrics section */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.metric-item {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.metric-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.metric-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+/* Performance Metrics Section */
+.performance-metrics {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.metric-item {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.metric-icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0, 153, 204, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.metric-icon img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.metric-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.metric-content p {
+    color: var(--gray-color);
+    margin-bottom: 0;
+}
+
+/* Our Approach Section */
+.our-approach {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.approach-steps {
+    margin-top: 40px;
+}
+
+.approach-step {
+    display: flex;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.approach-step:not(:last-child):after {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 25px;
+    width: 2px;
+    height: calc(100% - 20px);
+    background-color: var(--primary-color);
+}
+
+.step-number {
+    flex: 0 0 50px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-right: 20px;
+    z-index: 1;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.step-content p {
+    color: var(--gray-color);
+    margin-bottom: 0;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .performance-metrics,
+    .our-approach {
+        padding: 50px 0;
+    }
+    
+    .metrics-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .approach-step {
+        margin-bottom: 40px;
+    }
+    
+    .approach-step:not(:last-child):after {
+        height: calc(100% + 10px);
+    }
+}
+
+/* Pricing Section */
+.pricing-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.pricing-table {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.pricing-plan {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.pricing-plan:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-header {
+    padding: 25px;
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+}
+
+.pricing-header h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.pricing-price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.pricing-price span {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.pricing-body {
+    padding: 30px;
+}
+
+.pricing-features {
+    margin-bottom: 30px;
+}
+
+.pricing-features li {
+    margin-bottom: 15px;
+    padding-left: 30px;
+    position: relative;
+}
+
+.pricing-features li:before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+.pricing-features li.unavailable {
+    color: #aaa;
+    text-decoration: line-through;
+}
+
+.pricing-features li.unavailable:before {
+    content: '✕';
+    color: #ff6b6b;
+}
+
+.pricing-cta {
+    text-align: center;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .pricing-section {
+        padding: 50px 0;
+    }
+    
+    .pricing-table {
+        grid-template-columns: 1fr;
+    }
+    
+    .pricing-plan {
+        margin-bottom: 30px;
+    }
+    
+    .pricing-plan:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Ensure CTA section has consistent styling */
+.cta-section {
+    background-color: var(--primary-color);
+    padding: 80px 0;
+    color: white;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Further mobile responsiveness */
+@media (max-width: 576px) {
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-buttons .btn {
+        width: 100%;
+        max-width: 250px;
+        margin-bottom: 15px;
+    }
+    
+    .case-study-content h3 {
+        font-size: 1.5rem;
+    }
+    
+    .result-item {
+        min-width: 100px;
+    }
+    
+    .banner-text h1,
+    .service-hero-text h1 {
+        font-size: 2rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .step-content h3,
+    .metric-content h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Fix for Google Ads page content */
+.service-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: var(--primary-color);
+    text-align: left;
+    line-height: 1.2;
+}
+
+.service-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var(--gray-color);
+    text-align: left;
+    max-width: 900px;
+}
+
+.service-content strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Improved service hero section */
+.service-hero-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 40px;
+    align-items: center;
+}
+
+.service-hero-text {
+    text-align: left;
+}
+
+.service-hero-text h2 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.service-hero-text p {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.service-hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-hero-image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+/* Improve case studies section */
+.case-studies {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.case-studies-slider {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.case-study {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.case-study-image {
+    flex: 0 0 40%;
+    max-width: 40%;
+    position: relative;
+}
+
+.case-study-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.case-study-content {
+    flex: 1;
+    padding: 30px;
+}
+
+.industry-tag {
+    display: inline-block;
+    padding: 5px 15px;
+    background-color: rgba(0, 153, 204, 0.1);
+    color: var(--primary-color);
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.case-study-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    text-align: left;
+}
+
+.case-study-content p {
+    margin-bottom: 20px;
+    color: var(--gray-color);
+    text-align: left;
+}
+
+.results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.result-item {
+    flex: 1;
+    min-width: 120px;
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.result-number {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.result-label {
+    font-size: 0.9rem;
+    color: var(--gray-color);
+    text-align: center;
+}
