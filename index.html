@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Grofit Nation | Your Partner in Digital Growth</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/style4.css">
+    <link rel="stylesheet" href="css/style5.css">
+    <link rel="stylesheet" href="css/style6.css">
+    <link rel="stylesheet" href="css/style7.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
@@ -61,22 +68,24 @@
             <h2 class="section-title">Our <span>Pricing Plans</span></h2>
             <p class="section-description">Pick Your Perfect Plan</p>
             
-            <div class="mobile-scroll-indicator">Swipe left or right to view all plans →</div>
-            
-            <!-- Left scroll arrow -->
-            <div class="scroll-arrow left">
-                <i class="fas fa-chevron-left"></i>
-            </div>
-            
-            <div class="pricing-cards-container">
-                <!-- Basic Plan -->
-                <div class="pricing-card">
-                    <div class="card-header">
-                        <h3>Basic</h3>
-                        <div class="price">₹<span>999</span></div>
-                    </div>
-                    <div class="card-body">
-                        <button class="choose-plan-btn">Choose Plan</button>
+            <!-- New single pricing box with tabs -->
+            <div class="pricing-box">
+                <!-- Tabs for each plan -->
+                <div class="pricing-tabs">
+                    <div class="pricing-tab" data-plan="basic">Basic</div>
+                    <div class="pricing-tab recommended active" data-plan="standard">Standard</div>
+                    <div class="pricing-tab" data-plan="business">Business</div>
+                </div>
+                
+                <!-- Content panels for each plan -->
+                <div class="pricing-content">
+                    <!-- Basic Plan Panel -->
+                    <div class="pricing-panel" id="basic-panel">
+                        <div class="pricing-header">
+                            <h3>Basic</h3>
+                            <div class="price">₹<span>999</span></div>
+                        </div>
+                        <button class="choose-plan-btn" data-plan="Basic">Choose Plan</button>
                         <ul class="plan-features">
                             <li class="available"><i class="fas fa-check"></i> Shopify Store Design</li>
                             <li class="available"><i class="fas fa-check"></i> Mobile & Desktop Friendly Design</li>
@@ -88,17 +97,14 @@
                             <li class="unavailable"><i class="fas fa-times"></i> Store SEO</li>
                         </ul>
                     </div>
-                </div>
-                
-                <!-- Standard Plan -->
-                <div class="pricing-card recommended default-visible">
-                    <div class="recommended-badge">Recommended</div>
-                    <div class="card-header">
-                        <h3>Standard</h3>
-                        <div class="price">₹<span>1999</span></div>
-                    </div>
-                    <div class="card-body">
-                        <button class="choose-plan-btn">Choose Plan</button>
+                    
+                    <!-- Standard Plan Panel -->
+                    <div class="pricing-panel active" id="standard-panel">
+                        <div class="pricing-header">
+                            <h3>Standard</h3>
+                            <div class="price">₹<span>1999</span></div>
+                        </div>
+                        <button class="choose-plan-btn" data-plan="Standard">Choose Plan</button>
                         <ul class="plan-features">
                             <li class="available"><i class="fas fa-check"></i> Shopify Store Design</li>
                             <li class="available"><i class="fas fa-check"></i> Domain Integration</li>
@@ -113,16 +119,14 @@
                             <li class="unavailable"><i class="fas fa-times"></i> Store SEO</li>
                         </ul>
                     </div>
-                </div>
-                
-                <!-- Business Plan -->
-                <div class="pricing-card">
-                    <div class="card-header">
-                        <h3>Business</h3>
-                        <div class="price"><i class="fas fa-phone"></i> Inquiry</div>
-                    </div>
-                    <div class="card-body">
-                        <button class="choose-plan-btn">Choose Plan</button>
+                    
+                    <!-- Business Plan Panel -->
+                    <div class="pricing-panel" id="business-panel">
+                        <div class="pricing-header">
+                            <h3>Business</h3>
+                            <div class="price"><i class="fas fa-phone"></i> Inquiry</div>
+                        </div>
+                        <button class="choose-plan-btn" data-plan="Business">Choose Plan</button>
                         <ul class="plan-features">
                             <li class="available"><i class="fas fa-check"></i> Shopify Store Design</li>
                             <li class="available"><i class="fas fa-check"></i> Domain Integration</li>
@@ -138,11 +142,16 @@
                         </ul>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Right scroll arrow -->
-            <div class="scroll-arrow right">
-                <i class="fas fa-chevron-right"></i>
+                
+                <!-- Navigation buttons under content -->
+                <div class="pricing-navigation">
+                    <div class="pricing-nav-btn prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="pricing-nav-btn next">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
