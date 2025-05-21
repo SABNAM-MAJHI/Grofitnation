@@ -19,6 +19,7 @@
     --yellow-highlight: #ffcc00;
     --service-card-bg: #fff;
     --background-light: #f8f9fa;
+    --checkmark-color: #ff7171; /* New coral/salmon pink color for checkmarks */
 }
 
 * {
@@ -371,11 +372,35 @@ header .container {
     text-align: center;
 }
 
+/* Media queries for mobile devices */
+@media (max-width: 768px) {
+    .hero {
+        padding: 100px 0 40px; /* Reduced bottom padding */
+    }
+
+    .hero .btn.primary-btn {
+        font-size: 1rem; /* Smaller font size */
+        padding: 10px 20px; /* Reduced padding */
+        margin-top: 15px; /* Reduced top margin */
+    }
+}
+
 /* Pricing Section */
 .pricing-cards {
     padding: 80px 0;
     background-color: var(--background-light);
     position: relative;
+}
+
+/* Media queries for mobile devices */
+@media (max-width: 768px) {
+    .pricing-cards {
+        padding: 40px 0; /* Reduced padding for mobile */
+    }
+    
+    .section-title {
+        margin-bottom: 1.5rem; /* Reduced margin for section title */
+    }
 }
 
 /* New consolidated pricing box styles */
@@ -519,29 +544,78 @@ header .container {
 }
 
 .plan-features li {
-    padding: 12px 5px;
+    padding: 12px 5px 12px 25px;
     border-bottom: 1px solid #f1f1f1;
     display: flex;
     align-items: center;
     font-size: 15px;
+    position: relative;
 }
 
-.plan-features li i {
-    width: 20px;
-    margin-right: 15px;
-    text-align: center;
+/* Available items styling */
+.plan-features li.available::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--checkmark-color);
+    font-weight: bold;
+    font-size: 14px;
 }
 
-.plan-features .available i {
-    color: var(--accent);
-}
-
-.plan-features .unavailable {
+/* Unavailable items styling */
+.plan-features li.unavailable {
     color: #888;
 }
 
-.plan-features .unavailable i {
-    color: #ddd;
+.plan-features li.unavailable::before {
+    content: '×';
+    position: absolute;
+    left: 0;
+    color: var(--checkmark-color);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Remove old icon styles */
+.plan-features li i {
+    display: none;
+}
+
+/* Update other list styles to match */
+.features-list li,
+.service-card li,
+.us li {
+    padding: 12px 5px 12px 25px;
+    position: relative;
+}
+
+.features-list li::before,
+.service-card li::before,
+.us li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--checkmark-color);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Unavailable items in other lists */
+.features-list li.unavailable,
+.service-card li.unavailable,
+.us li.unavailable {
+    color: #888;
+}
+
+.features-list li.unavailable::before,
+.service-card li.unavailable::before,
+.us li.unavailable::before {
+    content: '×';
+    position: absolute;
+    left: 0;
+    color: var(--checkmark-color);
+    font-weight: bold;
+    font-size: 16px;
 }
 
 /* Pricing navigation buttons */

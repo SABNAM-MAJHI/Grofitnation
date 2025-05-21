@@ -335,14 +335,9 @@
     align-items: flex-start;
 }
 
+/* Remove the vertical connecting lines */
 .step:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    top: 50px;
-    left: 25px;
-    height: calc(100% - 20px);
-    width: 2px;
-    background-color: var(--primary-color);
+    display: none; /* This removes the vertical lines */
 }
 
 .step-number {
